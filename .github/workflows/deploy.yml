@@ -1,0 +1,57 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up SSH
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | base64 --decode > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          ssh-keyscan -t rsa $SSH_HOSTNAME >> ~/.ssh/known_hosts
+
+          echo -e "Host $SSH_VM_NAME\n  HostName $SSH_HOSTNAME\n  User $SSH_USER\n  IdentityFile ~/.ssh/id_ed25519" > ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOSTNAME: ${{ secrets.SSH_HOSTNAME }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_VM_NAME: ${{ secrets.SSH_VM_NAME }}
+
+      - name: Test SSH Connection
+        run: ssh $SSH_VM_NAME "echo SSH connection successful!"
+
+        env:
+          SSH_VM_NAME: ${{ secrets.SSH_VM_NAME}}
+
+      - name: Execute deploy commands via SSH
+        run: |
+          ssh $SSH_VM_NAME '
+            cd /home/feriado/proximo-feriado
+            sudo chown -R $SSH_USER:$SSH_USER .
+            sudo chmod -R 777 .
+            git reset --hard origin/main
+            git clean -fd
+            git pull --rebase=merges --strategy=theirs
+            rm -rf node_modules
+            mkdir node_modules
+            /home/debian/.bun/bin/bun install
+            /home/debian/.bun/bin/bun astro build
+            pm2 restart proximo-feriado || pm2 start --name proximo-feriado /dist/server/entry.mjs -- start    
+          '
+        env:
+          SSH_VM_NAME: ${{ secrets.SSH_VM_NAME}}
+          SSH_HOSTNAME: ${{ secrets.SSH_HOSTNAME }}
+          SSH_USER: ${{ secrets.SSH_USER }}

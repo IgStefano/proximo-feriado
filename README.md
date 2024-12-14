@@ -2,7 +2,7 @@
 
 Um projeto simples e divertido que mostra qual é o próximo feriado nacional no Brasil. Clique na mensagem para ver diferentes variações!
 
-Este projeto foi profundamente inspirado por projetos como [Should I Deploy Today][https://shouldideploy.today/] e [Devo Deployar][https://devodeployar.dev/].
+Este projeto foi profundamente inspirado por projetos como [Should I Deploy Today](https://shouldideploy.today/) e [Devo Deployar](https://devodeployar.dev/).
 
 ## 🚀 Tecnologias
 

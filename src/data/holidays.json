@@ -1,0 +1,109 @@
+[
+  {
+    "date": "2024-12-25",
+    "name": "Natal",
+    "messages": [
+      { "text": "Ho-ho-ho!", "emoji": "🎅" },
+      { "text": "Já montou sua árvore de natal?", "emoji": "🎄" },
+      { "text": "Espírito natalino", "emoji": "🎁" },
+      { "text": "Papai Noel, aceita PIX?", "emoji": "🎅" },
+      { "text": "Tô só pelo chester e panetone!", "emoji": "🍖" },
+      { "text": "Feliz Natal! Cadê meu presente?", "emoji": "🎁" }
+    ]
+  },
+  {
+    "date": "2025-01-01",
+    "name": "Ano Novo",
+    "messages": [
+      { "text": "Ano novo, vida nova... até dia 3!", "emoji": "🎆" },
+      { "text": "Já quebrou todas as promessas?", "emoji": "😅" },
+      { "text": "Roupa branca e muito carão!", "emoji": "✨" }
+    ]
+  },
+  {
+    "date": "2025-02-17",
+    "name": "Carnaval",
+    "messages": [
+      { "text": "Glitter na cara e alegria no coração!", "emoji": "✨" },
+      { "text": "Eu só quero é ser feliz... 🎵", "emoji": "🎭" },
+      { "text": "Amanhã eu volto a dieta!", "emoji": "🍺" }
+    ]
+  },
+  {
+    "date": "2025-04-07",
+    "name": "Sexta-Feira Santa",
+    "messages": [
+      { "text": "Dia de peixe!", "emoji": "🐟" },
+      { "text": "Cadê o bacalhau da vovó?", "emoji": "👵" }
+    ]
+  },
+  {
+    "date": "2025-04-21",
+    "name": "Tiradentes",
+    "messages": [
+      {
+        "text": "Tiradentes, o dentista mais famoso do Brasil!",
+        "emoji": "🦷"
+      },
+      { "text": "Feriado é feriado!", "emoji": "😎" },
+      { "text": "Bora emendar?", "emoji": "🎉" }
+    ]
+  },
+  {
+    "date": "2025-05-01",
+    "name": "Dia do Trabalho",
+    "messages": [
+      { "text": "Dia de não trabalhar!", "emoji": "😴" },
+      { "text": "Netflix e pipoca, só isso!", "emoji": "🍿" }
+    ]
+  },
+  {
+    "date": "2025-09-07",
+    "name": "Independência do Brasil",
+    "messages": [
+      { "text": "Dom Pedro I: 'Voltei pra Portugal, flw vlw!'", "emoji": "👑" },
+      {
+        "text": "Independência ou morte! (Prefiro a independência)",
+        "emoji": "🇧🇷"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-12",
+    "name": "Nossa Senhora Aparecida",
+    "messages": [
+      { "text": "Dia das crianças! Não, pera...", "emoji": "🙏" },
+      { "text": "Fé na graça do feriadão!", "emoji": "✨" }
+    ]
+  },
+  {
+    "date": "2025-11-02",
+    "name": "Finados",
+    "messages": [{ "text": "...", "emoji": "🕊️" }]
+  },
+  {
+    "date": "2025-11-15",
+    "name": "Proclamação da República",
+    "messages": [{ "text": "Mais um feriado pra conta!", "emoji": "🎉" }]
+  },
+  {
+    "date": "2025-11-20",
+    "name": "Dia da Consciência Negra",
+    "messages": [
+      { "text": "Zumbi vive! ✊🏾", "emoji": "✊🏾" },
+      { "text": "Resistência e luta sempre!", "emoji": "💪🏾" }
+    ]
+  },
+  {
+    "date": "2025-12-25",
+    "name": "Natal",
+    "messages": [
+      { "text": "Ho-ho-ho!", "emoji": "🎅" },
+      { "text": "Já montou sua árvore de natal?", "emoji": "🎄" },
+      { "text": "Espírito natalino", "emoji": "🎁" },
+      { "text": "Papai Noel, aceita PIX?", "emoji": "🎅" },
+      { "text": "Tô só pelo chester e panetone!", "emoji": "🍖" },
+      { "text": "Feliz Natal! Cadê meu presente?", "emoji": "🎁" }
+    ]
+  }
+]

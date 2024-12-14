@@ -1,22 +1,94 @@
+---
+import DarkModeButton from "../components/DarkModeButton";
+
+const theme = Astro.cookies.get('theme')?.value || 'light';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL;
+const { holidayName } = Astro.props;
+
+const description = holidayName 
+  ? `O próximo feriado é ${holidayName}!`
+  : 'Descubra qual é o próximo feriado no Brasil.';
+  
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" class={theme}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet">
+
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- Primary Meta Tags -->
+		<title>Qual É o Próximo Feriado</title>
+		<meta name="title" content="Qual É o Próximo Feriado">
+		<meta name="description" content={description}>
+		<meta name="keywords" content="feriados, brasil, próximo feriado, calendário, datas comemorativas">
+		<meta name="author" content="Igor Stefano ">
+		<meta name="language" content="Portuguese">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content={siteUrl}>
+		<meta property="og:title" content="Qual É o Próximo Feriado">
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content={`${siteUrl}/seo-image.png`}>
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content={siteUrl}>
+		<meta property="twitter:title" content="Qual É o Próximo Feriado">
+		<meta property="twitter:description" content={description}>
+		<meta property="twitter:image" content={`${siteUrl}/seo-image.png`}>
+
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Qual É o Próximo Feriado",
+			"description": "Descubra qual é o próximo feriado no Brasil.",
+			"url": siteUrl,
+			"inLanguage": "pt-BR",
+			"author": {
+			  "@type": "Person",
+			  "name": "Igor Stefano"
+			},
+			"mainEntity": {
+			  "@type": "Dataset",
+			  "name": "Feriados Brasileiros",
+			  "description": "Informa qual é o próximo feriado nacional do Brasil",
+			  "about": "Feriados Nacionais",
+			  "keywords": ["feriados", "brasil", "próximo feriado", "calendário", "datas comemorativas"]
+			}
+		  })} />
 	</head>
 	<body>
-		<slot />
+		<div class="absolute top-4 right-4">
+			<DarkModeButton client:only="react" />
+		</div>
+		<section class="flex flex-col gap-4 h-screen w-screen justify-center items-center">
+			<slot />
+		</section>
 	</body>
 </html>
 
 <style>
+	:root {
+		--background: #fafafa;
+		--text: #171717;
+	}
+
+	.dark {
+		--background: #171717;
+		--text: #fafafa;
+	}
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: var(--background);
+		color: var(--text)
 	}
 </style>

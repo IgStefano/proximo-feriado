@@ -57,4 +57,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-Feito com ❤️ por [Igor Stefano][https://github.com/igstefano]
+Feito com ❤️ por [Igor Stefano](https://linkedin.com/in/igor-stefano)

@@ -3,11 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Holiday from '../components/Holiday';
 import Footer from '../components/Footer/Footer.astro';
 import { getInitialHoliday } from '../utils/getInitialHoliday';
+import Title from '../components/Title.astro';
 
 const holidayData = getInitialHoliday();
 ---
 
 <Layout holidayName={holidayData.name}>
+	<Title />
 	<Holiday client:load holidayData={holidayData} />
 	<Footer />
 </Layout>

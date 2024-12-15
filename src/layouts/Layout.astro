@@ -1,5 +1,7 @@
 ---
 import DarkModeButton from "../components/DarkModeButton";
+import Footer from "../components/Footer/Footer.astro";
+import Title from "../components/Title.astro";
 
 const theme = Astro.cookies.get('theme')?.value || 'light';
 const siteUrl = import.meta.env.PUBLIC_SITE_URL;
@@ -68,7 +70,9 @@ const description = holidayName
 			<DarkModeButton client:only="react" />
 		</div>
 		<section class="flex flex-col gap-4 h-dvh w-screen justify-center items-center">
+			<Title />
 			<slot />
+			<Footer />
 		</section>
 	</body>
 </html>

@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Holiday from '../components/Holiday';
 import { getInitialHoliday } from '../utils/getInitialHoliday';
+import SuggestionsForm from '../components/Suggestions';
+const alecrimUrl = import.meta.env.ALECRIM_BOT_URL;
 
 const holidayData = getInitialHoliday();
 ---
 
 <Layout holidayName={holidayData.name}>
-	<Holiday client:load holidayData={holidayData} />
+	<SuggestionsForm alecrimUrl={alecrimUrl} client:load />
 </Layout>

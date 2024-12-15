@@ -86,7 +86,7 @@ export default function SuggestionsForm({
             type="text"
             name="Nome"
             placeholder="João Silva (@joao_silva)"
-            className={`py-2 pl-2 border rounded-md outline-none selection:bg-emerald-400 ${
+            className={`py-2 pl-2 dark:text-gray-900 border rounded-md outline-none selection:bg-emerald-400 ${
               errorFields.includes("author") ? "border-red-500" : ""
             }`}
             value={author}
@@ -112,7 +112,7 @@ export default function SuggestionsForm({
             id="Link"
             name="Link"
             placeholder="https://redesocial.com/joao_silva"
-            className="py-2 pl-2 border rounded-md outline-none selection:bg-emerald-400"
+            className="py-2 pl-2 dark:text-gray-900 border rounded-md outline-none selection:bg-emerald-400"
             value={link}
             onChange={(event) => setLink(event.target.value)}
           />
@@ -129,7 +129,7 @@ export default function SuggestionsForm({
             id="Sugestao"
             name="Sugestao"
             placeholder="Dia de comer peru 😎"
-            className={`py-2 pl-2 border rounded-md outline-none selection:bg-emerald-400 ${
+            className={`py-2 pl-2 dark:text-gray-900 border rounded-md outline-none selection:bg-emerald-400 ${
               errorFields.includes("message") ? "border-red-500" : ""
             }`}
             value={message}
@@ -155,7 +155,7 @@ export default function SuggestionsForm({
             id="Feriado"
             name="Feriado"
             placeholder="Natal"
-            className={`py-2 pl-2 border rounded-md outline-none selection:bg-emerald-400 ${
+            className={`py-2 pl-2 dark:text-gray-900 border rounded-md outline-none selection:bg-emerald-400 ${
               errorFields.includes("holiday") ? "border-red-500" : ""
             }`}
             value={holiday}

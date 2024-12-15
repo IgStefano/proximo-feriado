@@ -8,7 +8,14 @@
       { "text": "Espírito natalino", "emoji": "🎁" },
       { "text": "Papai Noel, aceita PIX?", "emoji": "🎅" },
       { "text": "Tô só pelo chester e panetone!", "emoji": "🍖" },
-      { "text": "Feliz Natal! Cadê meu presente?", "emoji": "🎁" }
+      { "text": "Feliz Natal! Cadê meu presente?", "emoji": "🎁" },
+      {
+        "text": "Papai Noel está com o saco cheio!",
+        "emoji": "🎅",
+        "contribution": {
+          "author": "Gabriel Preto"
+        }
+      }
     ]
   },
   {

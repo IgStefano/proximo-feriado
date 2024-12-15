@@ -23,7 +23,7 @@ export default function Holiday({ holidayData }: HolidayProps) {
     setCurrentMessage(message);
   };
   return (
-    <main className="h-[80%] flex justify-center flex-col">
+    <main className="h-full flex justify-center flex-col">
       <h2 className="font-fredoka text-4xl text-center mb-8">
         {holidayData.name}
       </h2>

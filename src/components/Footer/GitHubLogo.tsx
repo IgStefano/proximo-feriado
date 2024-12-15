@@ -1,5 +1,5 @@
-import GitHubLightLogo from "../../../public/logos/github_light.png";
-import GitHubDarkLogo from "../../../public/logos/github_dark.png";
+import GitHubLightLogo from "../../assets/logos/github_light.png";
+import GitHubDarkLogo from "../../assets/logos/github_dark.png";
 import { useSyncExternalStore } from "react";
 
 export default function GitHubLogo() {

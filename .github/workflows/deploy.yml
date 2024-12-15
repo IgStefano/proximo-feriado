@@ -44,7 +44,7 @@ jobs:
             sudo chmod -R 777 .
             git reset --hard origin/main
             git clean -fd
-            git pull --rebase=merges --strategy=theirs
+            git pull
             rm -rf node_modules
             mkdir node_modules
             /home/debian/.bun/bin/bun install

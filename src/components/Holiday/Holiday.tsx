@@ -53,7 +53,7 @@ export default function Holiday({ holidayData, alecrimUrl }: HolidayProps) {
         <MessageChanger changeMessage={changeMessage} />
         <small
           onClick={handleOpenModal}
-          className="mt-2 flex w-full cursor-pointer justify-center text-xs font-light italic tracking-wide opacity-80"
+          className="mt-2 flex w-full cursor-pointer justify-center text-xs font-light italic tracking-wide opacity-80 transition-colors duration-300 hover:text-emerald-800 focus:text-emerald-800 hover:dark:text-emerald-400 focus:dark:text-emerald-400"
         >
           (Ou clique aqui para sugerir uma nova mensagem)
         </small>

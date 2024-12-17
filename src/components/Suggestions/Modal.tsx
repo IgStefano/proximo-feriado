@@ -22,7 +22,7 @@ export default function Modal({
     >
       <div
         ref={modalRef}
-        className="relative h-full w-full overflow-y-scroll bg-white px-12 py-4 sm:max-h-[80%] sm:max-w-[75%] md:max-h-[480px] md:max-w-[600px]"
+        className="relative h-full w-full overflow-y-scroll bg-[#fafafa] px-12 py-4 sm:max-h-[80%] sm:max-w-[75%] md:max-h-[480px] md:max-w-[600px] dark:bg-[#171717]"
       >
         <svg
           onClick={handleCloseModal}

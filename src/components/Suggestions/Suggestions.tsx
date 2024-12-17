@@ -176,7 +176,7 @@ export default function SuggestionsForm({
         </div>
         <button
           type="button"
-          className="mb-4 mt-2 rounded-md border bg-emerald-400 px-4 py-2 font-bold text-gray-50 transition-opacity duration-300 hover:opacity-70"
+          className="mb-4 mt-2 rounded-md bg-emerald-400 px-4 py-2 font-bold text-gray-50 transition-opacity duration-300 hover:opacity-70"
           onClick={async () => {
             await handlePost();
           }}

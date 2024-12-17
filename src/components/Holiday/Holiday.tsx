@@ -1,7 +1,7 @@
 import { getHolidayByName } from "../../utils/getHoliday";
 import holidays from "../../data/holidays.json";
 import { getMessage } from "../../utils/getMessage";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import type { Message } from "../../types/typings";
 import Contribution from "./Contribution";
 import MessageChanger from "./MessageChanger";
@@ -18,7 +18,7 @@ interface HolidayProps {
 
 export default function Holiday({ holidayData, alecrimUrl }: HolidayProps) {
   const [currentMessage, setCurrentMessage] = useState(holidayData.message);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -28,12 +28,14 @@ export default function Holiday({ holidayData, alecrimUrl }: HolidayProps) {
     setIsModalOpen(true);
   };
 
-  const changeMessage = () => {
+  const changeMessage = useCallback(() => {
     const { messages } = getHolidayByName({ holidays, name: holidayData.name });
     const message = getMessage(messages);
 
-    setCurrentMessage(message);
-  };
+    if (!isModalOpen) {
+      setCurrentMessage(message);
+    }
+  }, [isModalOpen]);
 
   const contribution = currentMessage.contribution;
 

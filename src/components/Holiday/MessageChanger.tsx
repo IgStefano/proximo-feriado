@@ -6,26 +6,26 @@ export default function MessageChanger({
   changeMessage: () => void;
 }) {
   useEffect(() => {
-    function changeMessageOnKeydown(event: KeyboardEvent) {
+    const changeMessageOnKeydown = (event: KeyboardEvent) => {
       if (event.keyCode === 32) {
         changeMessage();
       }
-    }
+    };
 
     document.addEventListener("keydown", changeMessageOnKeydown);
 
     return () => {
       document.removeEventListener("keydown", changeMessageOnKeydown);
     };
-  }, []);
+  }, [changeMessage]);
 
   return (
     <p
       onClick={changeMessage}
-      className="mt-12 flex justify-center items-center w-full font-light bg-transparent no-underline outline-none cursor-pointer"
+      className="mt-12 flex w-full cursor-pointer items-center justify-center bg-transparent font-light no-underline outline-none"
     >
       Aperte{" "}
-      <span className="py-2 px-4 mx-2 border border-gray-200 rounded-md tracking-wide">
+      <span className="mx-2 rounded-md border border-gray-200 px-4 py-2 tracking-wide">
         Espaço
       </span>{" "}
       ou clique aqui

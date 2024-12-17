@@ -43,7 +43,7 @@ export default function SuggestionsForm({
   if (hasSubmissionError) {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4">
-        <p className="text-4xl text-red-500">
+        <p className="text-balance text-center text-4xl text-red-500">
           Houve um erro ao enviar seus dados 😔
         </p>
         <small className="opacity-60">Tente novamente mais tarde</small>
@@ -54,7 +54,7 @@ export default function SuggestionsForm({
   if (hasSubmitted) {
     return (
       <div className="flex h-full flex-col items-center justify-center gap-4">
-        <p className="text-4xl text-emerald-800 dark:text-emerald-200">
+        <p className="text-balance text-center text-4xl text-emerald-800 dark:text-emerald-200">
           Obrigado por sua contribuição!
         </p>
         <small className="opacity-60">Você é top 🤙</small>
@@ -176,7 +176,7 @@ export default function SuggestionsForm({
         </div>
         <button
           type="button"
-          className="mt-2 rounded-md border bg-emerald-400 px-4 py-2 font-bold text-gray-50 transition-opacity duration-300 hover:opacity-70"
+          className="mb-4 mt-2 rounded-md border bg-emerald-400 px-4 py-2 font-bold text-gray-50 transition-opacity duration-300 hover:opacity-70"
           onClick={async () => {
             await handlePost();
           }}

@@ -4,8 +4,10 @@ import Holiday from '../components/Holiday/Holiday';
 import { getInitialHoliday } from '../utils/getInitialHoliday';
 
 const holidayData = getInitialHoliday();
+const alecrimUrl = import.meta.env.ALECRIM_BOT_URL;
+
 ---
 
 <Layout holidayName={holidayData.name}>
-	<Holiday client:load holidayData={holidayData} />
+	<Holiday client:load holidayData={holidayData} alecrimUrl={alecrimUrl} />
 </Layout>
